@@ -1,0 +1,65 @@
+1) What is Selenium? What are the different Selenium components? Explain about Selenium Webdriver.
+   Selenium is a free open-source automated testing framework used to validate web applications across
+   different browsers and platforms. and we can use multiple languages like java, python, etx...
+   components:
+   Selenium Integrated Development Environment (IDE)
+   Selenium Remote Control (RC)
+   Selenium Grid
+   WebDriver
+         * which sends commands to a browser and retrieves results. 
+    
+2) How does Selenium communicate with the Web browsers?
+   Selenium Script creates an HTTP Request for each selenium command and sends it to the browser driver. An HTTP request is then 
+   sent to the server using Browser Driver. The steps are executed on the HTTP server.
+3.What are the locators available  to find an element using Selenium?
+   1.ID
+   2.Name
+   3.Class name
+   4.LinkTest
+   5.Partial link test
+   6.Tag name 
+   7.Selected css
+   8.Xpath
+4. Why ID is preferable than X-Path?
+   Because id is the unique identifier for the element and it does not change.
+   This makes ‘Ids’ a very explicit and reliable way to locate elements on the page.
+   Also, all browsers also have highly efficient methods to get an object on the page using their ids.
+5.How to select value in dropdown?
+    WebElement findElement = driver.findElement(By.id("dropdown1"));
+    Select dd1=new Select(findElement);
+    dd1.selectByValue("2");
+
+6) What is the difference between Absolute Path and Relative Path?
+                                 absolute                                          Relative
+   By definition	specifies the location from the root directory	   related to the location from current directory
+  
+   Navigates to         we can use Content from other domains	           we can use Content from the same domain
+7) How to verify if the given check box is checked or not (it is not taught but you can explore) Try here: http://leafground.com/pages/checkbox.html
+   public class CheckBox {
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver=new ChromeDriver();
+		driver.get("http://leafground.com/pages/checkbox.html");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().window().maximize();
+		
+		System.out.println( driver.findElement(By.xpath("(//input[@type='checkbox'])[8]")).isSelected());
+		
+	}
+
+}
+   
+8)Difference between System.setProperty and WebDriverManager
+  WebDriverManager automates the browser setup in the Selenium code. By default, 
+it downloads the latest version of the browser binary and also the binary for the appropriate platform.
+	setProperty method is used to configure the browser driver path.
+  
+9) Write the syntax for preceding and following x-paths.
+   
+   preceeding:
+	   Xpath= //*[@attribute='value']//preceding::input
+   following:
+           Xpath=//*[@attribute='value']//following:: input
+   
+10) How to get an attribute value using Selenium WebDriver?
+    The getAttribute() method helps to get the value of any attribute of a web element, which is returned as a String

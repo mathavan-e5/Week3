@@ -1,0 +1,66 @@
+
+       Answer All the Question
+1.Explain about the main method in java?
+  public static void main(String[] args);
+   public= A keyword and is an access modifier. so this method can call anywhere from the class and outside the class
+   static= keyword is static and this main method can access directlyby class name instead of creating object of main class
+   void  = keyword the main method does not return any value 
+   main  =  is a identifier not keyword is used by jvm to call the main method
+   String =  String Array is an argument to the main method 
+  
+2.What are the different  Control flow Statements available in java?
+  Decision statements
+  if statements
+  switch statement
+Loop statements
+  do while loop
+  while loop
+  for loop
+  for-each loop
+Jump statements
+  break statement
+  continue statement
+     
+3.What is the Difference betweeen break and continue statements?
+Break: Break statement mainly used to terminate the enclosing loop such as while, do-while, 
+Continue : Continue statement mainly skip the rest of loop wherever continue is declared and execute the next iteration.
+
+4.What is an Array? How will you declare an array in java?
+   Array is used to store the multiply value on same data type .and can be created for all data type 
+   * Literal-Its stored in constant memory pool
+        int[] arr={1,2,3,5,3,7,8};
+    *New keyword-Stored in heap memory.
+        int[] arr=new int[3]; 
+  
+5.When will you get ArrayIndexOutOfBoundsException?
+   If we store the value inout of bound limit this error will occur 
+
+6.Define the Syntax to create an object for a class
+  What are the naming conventions to be followed while creating a class, 
+  method and a variable.Explain with examoles
+
+  ClassName object = new ClassName();
+
+   class=  should start with the uppercase 
+             should be a noun such as Color, Button, System, Thread, etc.
+   method = the name contains multiple words, start it with a lowercase letter followed
+            by an uppercase letter such as actionPerformed().
+   variable = the lowercase letter followed
+            by an uppercase letter such as firstName, lastName.
+
+7.What is Variable?How will you declare a variables in java?
+   variable is a data container that saves the data values during Java program execution. 
+   decleration : int age="22";
+
+8.What is String in java? Is it a Data Type?
+    It’s not a primitive data type like int and long. String class represents character Strings.
+    data type is representing a sequence of characters placed in double quotation marks ("").
+9.What are the different ways to create the String Object in java?
+    1.Literal-(Stored in constant memory pool)
+      String  name ="(java)";
+    2.New keyword-(Stored in heap memory)
+      String name =new String();
+
+10.What is the Difference between .Equals and ==? 
+      Both are majorly used to compare the reference values and objects.but in Equals  it compare the content of the object
+      We can use the == operator with objects and primitives but in Equals we cannot
